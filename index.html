@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flash App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div id="pantalla-video" class="pantalla" style="display:flex">
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <video id="introVideo" src="intro.mp4" autoplay muted></video>
+  </div>
+
+  <div id="pantalla-01" class="pantalla">
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <h1>Hola, ¿cómo te llamas?</h1>
+    <input type="text" id="nombreUsuario" placeholder="Escribe tu nombre">
+    <button onclick="aceptarNombre()">Aceptar</button>
+  </div>
+
+  <div id="pantalla-02" class="pantalla">
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <h1 id="saludo"></h1>
+    
+    <div class="opciones">
+      <button onclick="seleccionarOpcion('Taxi')">Taxi</button>
+      <button onclick="seleccionarOpcion('Mototaxi')">Mototaxi</button>
+      <button onclick="seleccionarOpcion('Domicilio')">Domicilio</button>
+      <button onclick="seleccionarOpcion('Pago de facturas')">Pago de facturas</button>
+    </div>
+  </div>
+
+  <div id="pantalla-03" class="pantalla">
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <h1>¿Dónde quieres ir?</h1>
+    <input type="text" id="destino" placeholder="Escribe tu destino">
+    <button onclick="solicitarGPSDestino()">Aceptar</button>
+  </div>
+
+  <script src="app.js"></script>
+<a href="https://wa.me/573204006436?text=Quiero%20trabajar%20con%20ustedes" target="_blank" class="mensaje-final">¿Quieres trabajar con nosotros?</a>
+
+
+</body>
+</html>
